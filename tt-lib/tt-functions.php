@@ -22,6 +22,9 @@ require_once ('tt-shortcodes.php');
 // Custom fields
 // require_once ('tt-acf-fields.php');
 
+//Woocommerce theme support
+add_theme_support( 'woocommerce' );
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////// Add boostrap from CDN
 
 if( !function_exists("tt_bootstrap_cdn") ) {  

@@ -4,6 +4,7 @@ Template Name: Page
 */
 ?>
 <?php get_header(); ?>
+<div class="maxpg">
 <div id="page-main" class="row">
       <div class="page-inside col-sm-10 col-sm-offset-1">
     <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), '611,90' ); ?>
@@ -38,5 +39,6 @@ Template Name: Page
 
           </div>
   </div>
+</div>
 </div>
   <?php get_footer() ?>

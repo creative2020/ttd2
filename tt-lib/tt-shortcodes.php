@@ -80,8 +80,10 @@ if ( $the_query->have_posts() ) {
 		$post_id = get_the_ID();
 		$permalink = get_permalink( $id );
         $post = get_post();
-        //$image = the_post_thumbnail( 'thumbnail' );
+        $attachment_id = get_post_thumbnail_id( $post_id );
         $image = get_the_post_thumbnail( $post_id, $size, $attr );
+        $size = 'medium';
+        $img_src = wp_get_attachment_image_src( $attachment_id, $size, $icon );
 //        if (empty( $image )) {
 //            $image = '<img src="/wp-content/themes/math/images/img-fpo.png">';
 //        } //use for fall back image
@@ -93,7 +95,7 @@ if ( $the_query->have_posts() ) {
 //HTML
         
     $output .= '<a href="'.$permalink.'"><div class="list-wrap"><div class="list-img col-xs-12 col-sm-4">';  
-    $output .= $image .
+    $output .= '<img src="'.$img_src[0].'"/>'. 
                 '</div>'.
                 '<div class="row col-xs-12 col-sm-12">'. 
                     '<h2>'. $post->post_title .'</h2></a>'.

@@ -7,7 +7,8 @@
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen,projection" />
 <?php wp_head(); ?>
-    
+<script src="//use.typekit.net/ndy3syp.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>    
 </head>
 <body>
 <div class="container-fluid">
@@ -15,7 +16,7 @@
 <div class="row">
     <div id="top" class="col-xs-12 col-sm-10 col-sm-offset-1">
         <div class="logo col-xs-12 col-sm-12">
-                <a href="/"><img class="center-block" src="<?php echo get_stylesheet_directory_uri(); ?>/images/tran-thomas-design-kc.png" class="" width="250px"></a>
+                <a href="/"><img class="center-block" src="<?php echo get_stylesheet_directory_uri(); ?>/images/tran-thomas-design-kc.png" class="" width="350px"></a>
             <a href="<?php echo get_option('home'); ?>" title="<?php bloginfo('name'); ?>"></a>
         </div>
             <h2 class="phone-m col-xs-12 visible-xs-block text-center"><i class="fa fa-phone"></i> 123-456-7890</h2>

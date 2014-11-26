@@ -1,5 +1,6 @@
 
 <?php get_header(); ?>
+<div class="maxpg">
 <div id="page-main" class="row">
       <div class="page-inside col-sm-10 col-sm-offset-1">
     
@@ -25,5 +26,6 @@
         </div>
   </div>
   </div>
+</div>
 </div>
   <?php get_footer() ?>

@@ -135,3 +135,14 @@ add_action('admin_print_footer_scripts', 'tt_print_acf');
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
 
+function tt_wooemail_header() { 
+    
+    
+    // image size should be 600px wide
+    echo '<a href="http://hvwspecialists.com"><img src="'.get_stylesheet_directory_uri() . '/images/ttd-email-header.png"></a>';
+        
+}
+remove_action('woocommerce_email_header', array( $object, 'email_header' ));
+add_action( 'woocommerce_email_before_order_table', 'tt_wooemail_header' );
+
+/////////////////////////////////////////////////////////

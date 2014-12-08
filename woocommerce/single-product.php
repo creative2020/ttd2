@@ -44,7 +44,7 @@ get_header( 'shop' ); ?>
    
     
     </div>
-       <div id="sidebar" class="col-sm-4 flush">
+       <div id="sidebar" class="col-sm-4">
         <div id="social-media-icons">
             <a href="#"><i class="fa fa-facebook-square"></i></a>
             <a href="#"><i class="fa fa-twitter-square"></i></a>

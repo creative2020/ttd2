@@ -137,3 +137,65 @@ return '<div class="tt-hline">'.$content.'</div>';
 }
 
 ////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////// TT Social Media
+
+add_shortcode( 'tt_social_media', 'tt_social_media' );
+function tt_social_media ( $atts ) {
+
+	// Attributes
+	extract( shortcode_atts(
+		array(
+			'name' => '',
+            'id' => '',
+		), $atts )
+	);
+    
+// code
+return '<div id="social-media-icons">'.
+            '<a href="https://www.facebook.com/pages/Tran-Thomas-Design-Studio/227747890613984"><i class="fa fa-facebook-square"></i></a>'.
+            '<a href="#"><i class="fa fa-pinterest-square"></i></a>'.
+        '</div>'.
+        do_shortcode('[tt_hline]');    
+}
+
+////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////// TT Portfolio
+
+add_shortcode( 'tt_portfolio', 'tt_portfolio' );
+function tt_portfolio ( $atts ) {
+
+	// Attributes
+	extract( shortcode_atts(
+		array(
+			'name' => '',
+            'text' => '',
+            'img' => '2041',
+            'size' => 'small',
+            'icon' => '',
+            'link' => '#link',
+		), $atts )
+	);
+    
+    $img_url = wp_get_attachment_image_src( $img, $size, $icon );
+    
+// code
+return '<a href="'.$link.'">'.
+            '<div class="row">'.
+                    '<div class="col-sm-12">'.
+                    '<div class="tt-gallery-wrap">'.
+                    '<div class="tt-gallery-left col-sm-4 flush">'.
+                        '<img src="'.$img_url[0].'" class="img-responsive"/>'.
+                    '</div>'. // col
+                    '<div class="tt-gallery-right col-sm-8">'.
+                        '<h2>'.$name.'</h2>'.
+                        '<p class="tt-gallery-text">'.$text.'</p>'.
+                    '</div>'. // col
+                    '</div>'. // wrap
+                    '</div>'. // col 12
+            '</div>'. // row
+        '</a>'; //a
+}
+
+////////////////////////////////////////////////////////

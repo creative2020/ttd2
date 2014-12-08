@@ -12,10 +12,12 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 get_header( 'shop' ); ?>
+<div class="maxpg">
+    
 
-<div id="page-main" class="row">
-    <div id="page-header" class="col-sm-10 col-sm-offset-1">
-      <div class="page-inside col-sm-12 flush">
+    <div id="page-header" class="row">
+        <div class="col-sm-12">
+      
           
           <?php
 		/**
@@ -34,11 +36,13 @@ get_header( 'shop' ); ?>
 		<?php endif; ?>
           
     <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
-</div>    
-      
-<div id="page" class="row">
+          
+        </div>    
+    </div>    <!--    Page header-->
+<div id="page-main" class="row">
+
     
-<div id="page-content" class="col-xs-12 col-sm-12 col-md-8">
+<div id="page-content" class="col-sm-8">
     <?php do_action( 'woocommerce_archive_description' ); ?>
 
 		<?php if ( have_posts() ) : ?>
@@ -78,7 +82,7 @@ get_header( 'shop' ); ?>
 				do_action( 'woocommerce_after_shop_loop' );
 			?>
     </div>
-    <div id="sidebar" class="col-xs-12 col-sm-12 col-md-4 flush">
+    <div id="sidebar" class="col-xs-12 col-sm-4">
         <div id="social-media-icons">
             <a href="#"><i class="fa fa-facebook-square"></i></a>
             <a href="#"><i class="fa fa-twitter-square"></i></a>
@@ -114,6 +118,6 @@ get_header( 'shop' ); ?>
   </div>
 
 	
-
-<?php get_footer( 'shop' ); ?>
+</div> <!--Max page-->
 </div>
+<?php get_footer( 'shop' ); ?>

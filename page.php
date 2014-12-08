@@ -7,38 +7,39 @@ Template Name: Page
 <div class="maxpg">
 <div id="page-main" class="row">
       <div class="page-inside col-sm-10 col-sm-offset-1">
-    <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), '611,90' ); ?>
-    <div id="page-header" class="row">    
-      <div class="col-sm-8">
-        <h1><?php the_title(); ?></h1>
-      </div>
-        <div class="col-sm-4 flush">
+        <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), '611,90' ); ?>
+        <div id="page-header" class="row">    
+          <div class="col-sm-8">
+            <h1><?php the_title(); ?></h1>
+          </div>
+          <div class="col-sm-4 flush">
             <div class="pg-header-img-wrap flush hidden-xs">
                 <img class="page-header-img" src="<?php echo $src[0]; ?>"/>
             </div>
-      </div>
-    </div>
+          </div>
+        </div>
       
 <div class="row">  
-<div id="page-content" class="col-sm-8">
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <?php 
-        global $more;
-        $more = 1; 
-    ?>
-      <?php the_content(); ?>
-    <?php endwhile; endif; ?>
-  </div>
+    <div id="page-content" class="col-sm-8">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php 
+            global $more;
+            $more = 1; 
+        ?>
+        <?php the_content(); ?>
+        <?php endwhile; endif; ?>
+     </div>
       
- <div id="sidebar" class="col-xs-12 col-sm-4">
-            
-            <?php get_template_part( 'section', 'about-us' ); ?>
-            
-            <?php dynamic_sidebar( 'tt-sidebar' ); ?>
-</div>
+    <div id="sidebar" class="col-xs-12 col-sm-4">
+                
+                <?php get_template_part( 'section', 'about-us' ); ?>
+                
+                <?php dynamic_sidebar( 'tt-sidebar' ); ?>
+    </div>
 
-          </div>
-  </div>
+</div> <!-- row -->
 </div>
 </div>
-  <?php get_footer() ?>
+</div> <!--Max pg-->
+  
+<?php get_footer() ?>

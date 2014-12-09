@@ -171,7 +171,7 @@ function tt_portfolio ( $atts ) {
 		array(
 			'name' => '',
             'text' => '',
-            'img' => '2041',
+            'img' => '1100',
             'size' => 'small',
             'icon' => '',
             'link' => '#link',

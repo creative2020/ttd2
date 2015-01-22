@@ -29,8 +29,8 @@ Template Name: Home
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <a href="#"><div class="item active ">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider-bath.png" alt="..."style="display: inline-block; vertical-align: middle;">
+    <a href="#"><div class="item active">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider-A1-bath.png" alt="...">
       <div class="carousel-caption">
           <div id="slider-tagline" class="col-sm-4 col-sm-offset-1 pull-right">
             Luxury from imagination
@@ -40,7 +40,7 @@ Template Name: Home
     </div></a>
     </div>
     <div class="item">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider-bath.png" alt="..."style="display: inline-block; vertical-align: middle;">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider-A1-bath.png" alt="...">
       <div class="carousel-caption">
           <div id="slider-tagline" class="col-sm-4 col-sm-offset-1 pull-right">
             Bathed in elegance
@@ -50,7 +50,7 @@ Template Name: Home
     </div>
     </div>
     <div class="item">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider-bath.png" alt="..."style="display: inline-block; vertical-align: middle;">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider-A1-bath.png" alt="...">
     <div class="carousel-caption">
           <div id="slider-tagline" class="col-sm-4 col-sm-offset-1 pull-right">
             Some other headline
@@ -89,15 +89,6 @@ Template Name: Home
         </div>    
    
         <div id="sidebar" class="col-xs-12 col-sm-4">
-            
-<!--
-            <p><a href="/portfolio/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery.png" class="" width="100%"></a></p>
-            
--->
-            
-            
-            <?php get_template_part( 'section', 'about-us' ); ?>
-            
             <?php dynamic_sidebar( 'tt-sidebar' ); ?>
         </div>
         

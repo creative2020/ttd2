@@ -169,7 +169,10 @@ function tt_portfolio ( $atts ) {
 	// Attributes
 	extract( shortcode_atts(
 		array(
-			'name' => '',
+			'type' => 'main',
+            'col' => '3',
+            'height' => '',
+            'name' => '',
             'text' => '',
             'img' => '1100',
             'size' => 'small',
@@ -181,21 +184,39 @@ function tt_portfolio ( $atts ) {
     $img_url = wp_get_attachment_image_src( $img, $size, $icon );
     
 // code
-return '<a href="'.$link.'">'.
-            '<div class="row">'.
-                    '<div class="col-sm-12">'.
-                    '<div class="tt-gallery-wrap">'.
-                    '<div class="tt-gallery-left col-sm-4 flush">'.
-                        '<img src="'.$img_url[0].'" class="img-responsive"/>'.
-                    '</div>'. // col
-                    '<div class="tt-gallery-right col-sm-8">'.
-                        '<h2>'.$name.'</h2>'.
-                        '<p class="tt-gallery-text">'.$text.'</p>'.
-                    '</div>'. // col
-                    '</div>'. // wrap
-                    '</div>'. // col 12
-            '</div>'. // row
-        '</a>'; //a
+    
+    
+    if ($type == 'main') {
+    
+        $html = '' ?>
+        
+        <a href="<?php echo $link; ?>">
+                    
+                        <div class="col-sm-<?php echo $col; ?>">
+                            <div class="tt-gallery-wrap">
+                                <div class="tt-gallery-img-wrap" style="height:<?php echo $height; ?>">
+                                    <img src="<?php echo $img_url[0]; ?>" class="photo"/>
+                                </div>
+                                <div class="tt-gallery-caption col-sm-12">
+                                    <h2><?php echo $name; ?></h2>
+                                </div>    
+                            </div>
+                        </div>
+                    
+                </a> <!-- a -->
+                <?php '';
+            
+            return $html;
+    
+    } else {
+        // do nothing
+    }
+    
+    ////////////
+    
+    
+    
+    
 }
 
 ////////////////////////////////////////////////////////

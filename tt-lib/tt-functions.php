@@ -60,6 +60,9 @@ if( !function_exists("tt_theme_styles") ) {
         
         wp_register_style( 'tt-gallery', get_template_directory_uri() . '/tt-lib/css/tt-gallery.css', array('nextgen_basic_album_style'), '1.0', 'all' );
         wp_enqueue_style( 'tt-gallery' );
+        
+        wp_register_style( 'tt-typekit', get_template_directory_uri() . '/editor-style.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'tt-typekit' );
 
         // child themes
         // wp_register_style( 'tt-child', get_stylesheet_directory_uri() . '/tt-child.css', array(), '1.0', 'all' );

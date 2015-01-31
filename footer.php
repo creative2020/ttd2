@@ -4,10 +4,10 @@
             Kansas City
         </div>
         <div id="footer-col" class="col-sm-3">
-            Asheville
+            
         </div>
         <div id="footer-col" class="col-sm-3">
-            Ft. Lauderdale
+            
         </div>
         <div id="footer-col" class="col-sm-3">
             913 . 268 . 9595

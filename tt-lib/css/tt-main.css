@@ -1080,7 +1080,8 @@ ul.product-categories > li.cat-item:hover{
     overflow:hidden;
 }
 .tt-gallery-img-wrap img{
-    height:100%;
+    
+    width:100%;
     position:relative;
 	left: 50%;
     -webkit-transform: translateX(-50%);

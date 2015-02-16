@@ -20,7 +20,6 @@
       
   <div id="sidebar" class="col-xs-12 col-sm-4">
             
-            <?php get_template_part( 'section', 'about-us' ); ?>
             
             <?php dynamic_sidebar( 'tt-sidebar' ); ?>
         </div>

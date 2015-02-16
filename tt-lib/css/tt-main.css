@@ -1135,6 +1135,26 @@ ul.product-categories > li.cat-item:hover{
     font-size:2.0em;
     margin-right:5px;
 }
+/*Social share*/
+.wwm_socialshare_imagewrapper img.aligncenter:parent {
+    border:1px solid red;
+    margin:auto;
+}
+.wwm_socialshare_imagewrapper < img.aligncenter {
+    border:3px solid green;
+    text-align: center;
+}
+.wwm_socialshare_imagewrapper < img.aligncenter {
+    border:3px solid green;
+    text-align: center;
+}
+    
+    
+    
+    
+    
+/*    <div class="wwm_socialshare_imagewrapper"><img class="wpimagehover aligncenter" src="http://dev.tranthomasdesign.com/wp-content/uploads/2014/03/11939410435_5d72c3ee9c-225x300.jpg" alt="" width="225" height="300" data-fburl="CURRENT" data-tweeturl="CURRENT" data-pinurl="CURRENT" data-sstyle="circle" data-animation="fade"><ul class="wwm_social_share wwm_top_right" style="display: block;"><li class="wwm_pinit"></li></ul></div>*/
+    
 
 /* mobile ------------------------START------------------- */
 

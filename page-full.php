@@ -10,7 +10,7 @@ Template Name: Full Page
     <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), '611,90' ); ?>
     <div id="page-header" class="row">    
       <div class="col-sm-8">
-        <h1><?php the_title(); ?></h1>
+        <h1><?php tt_remove_title(); ?></h1>
       </div>
         <div class="col-sm-4 flush">
             <div class="pg-header-img-wrap flush hidden-xs">

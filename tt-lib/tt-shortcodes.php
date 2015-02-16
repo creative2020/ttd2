@@ -220,3 +220,45 @@ function tt_portfolio ( $atts ) {
 }
 
 ////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////// TT Remove Title
+
+add_shortcode( 'tt_remove_title', 'tt_remove_title' );
+function tt_remove_title ( $atts ) {
+
+	// Attributes
+	extract( shortcode_atts(
+		array(
+			'name' => '',
+		), $atts )
+	);
+    
+// code
+    $post_id = get_the_ID();
+    $title_show = get_post_meta( $post_id, 'title_show' );
+    
+    if ($title_show[0] == 'n') {
+    
+        $html = '' ?> <!-- html -->
+        
+        
+
+        <!-- html --><?php ''; 
+            
+            
+    
+    } else {
+        
+        $html = '' ?> <!-- html -->
+        
+        <?php the_title(); ?>
+
+        <!-- html --><?php '';
+        
+        
+    } 
+    
+    return $html;
+}
+
+////////////////////////////////////////////////////////
